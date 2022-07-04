@@ -10,8 +10,13 @@ console.log('namespace', namespace)
 function someDeepNestedCallToSet() {
     namespace.run(() => {
         namespace.set('a', 'value');
-        console.log(namespace);
+
+        console.log(1,namespace);
+        console.log(2,namespace.get('a'));
+        someDeepNestedCallToGet()
     })
+    console.log(3,namespace.get('a'));
+    console.log(4,namespace);
 }
 
 function someDeepNestedCallToGet() {
